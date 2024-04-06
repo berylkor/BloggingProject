@@ -1,5 +1,5 @@
 <?php
-    include "functions/home_fxn.php";
+    
 ?>
 
 <!DOCTYPE html>
