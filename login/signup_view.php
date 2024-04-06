@@ -91,7 +91,7 @@
                     </div>
                     <!-- button to submit -->
                     <div class="button_container">
-                        <input type="button" value="Sign up" id="signup" name="signup" onclick="return validateSignup()">
+                        <input type="button" value="Sign up" id="signup" name="signup" onclick="validateSignup()">
                     </div>
                 </form>
             </div>
