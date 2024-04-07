@@ -1,12 +1,12 @@
 <?php
-include "../settings/core.php";
-checkLogin();
-$role = checkRole();
-if ($role != 2)
-{
-    header("Location: ../view/community_view.php");
-};
-include "../functions/selecttag_fxn.php";
+    // include "../settings/core.php";
+    // checkLogin();
+    // $role = checkRole();
+    // if ($role != 2)
+    // {
+    //     header("Location: ../view/community_view.php");
+    // };
+    // include "../functions/selecttag_fxn.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,9 +73,9 @@ include "../functions/selecttag_fxn.php";
                         <label for="tag_options"> Post Tag</label>
                         <select name="tagopt" id="tagopt">
                             <option value="0">Select Tag</option>
-                            <?php
-                                createTagDropdown();
-                            ?>
+                            <!-- <?php
+                                // createTagDropdown();
+                            ?> -->
                         </select>
                     </div>
                     <div class="blogentry_title">
@@ -90,9 +90,6 @@ include "../functions/selecttag_fxn.php";
                 </form>
             </div>
         </div>
-
-
-
 
     </div>
     
