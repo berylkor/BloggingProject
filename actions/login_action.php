@@ -31,6 +31,7 @@
             else
             {
                 echo $_SESSION['user_not_found'] = "User not found";
+                header("Location:../login/login_view.php");
             }
         }
 

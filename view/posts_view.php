@@ -1,7 +1,9 @@
 <?php
 include "../settings/core.php";
+// check user logged in, redirect if not
 checkLogin();
 include "../functions/posts_fxn.php";
+include "../functions/user_fxn.php";
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,11 @@ include "../functions/posts_fxn.php";
 
         <!-- Page Sidebar -->
         <div class="sidebar_container">
+            <p id="welcome"> Welcome,</p>
+            <!-- displays the name of the current user -->
+            <?php displaycurrentuser() ?>;
+
+            <!-- sidebar elements -->
             <ul class="menu">
                 <li class="current">
                     <a href="../view/posts_view.php">
@@ -39,16 +46,16 @@ include "../functions/posts_fxn.php";
                 </li>
 
                 <li>
-                    <a href="../view/community_view.php">
-                        <img src="../assets/community.svg" alt="community">
-                        <span> Community </span>
+                    <a href="../view/analytics_view.php">
+                        <img src="../assets/analytics.svg" alt="analytics">
+                        <span> Dashboard </span>
                     </a>                    
                 </li>
 
                 <li>
-                    <a href="../view/analytics_view.php">
-                        <img src="../assets/analytics.svg" alt="analytics">
-                        <span> Dashboard </span>
+                    <a href="../view/community_view.php">
+                        <img src="../assets/community.svg" alt="community">
+                        <span> Community </span>
                     </a>                    
                 </li>
 
@@ -64,6 +71,7 @@ include "../functions/posts_fxn.php";
         <div class="pmain_container">
 
             <?php
+                // display  the current user's posts
                 createPost();
             ?> 
          

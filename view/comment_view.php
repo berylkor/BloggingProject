@@ -27,6 +27,8 @@
 
         <!-- Page Sidebar -->
         <div class="sidebar_container">
+            <p id="welcome"> Welcome,</p>
+            <p id="currentuser"> Beryl Koram</p>
             <ul class="menu">
                 <li class="current">
                     <a href="../view/posts_view.php">
@@ -42,16 +44,16 @@
                 </li>
 
                 <li>
-                    <a href="../view/community_view.php">
-                        <img src="../assets/community.svg" alt="community">
-                        <span> Community </span>
+                    <a href="../view/analytics_view.php">
+                        <img src="../assets/analytics.svg" alt="analytics">
+                        <span> Dashboard </span>
                     </a>                    
                 </li>
 
                 <li>
-                    <a href="../view/analytics_view.php">
-                        <img src="../assets/analytics.svg" alt="analytics">
-                        <span> Dashboard </span>
+                    <a href="../view/community_view.php">
+                        <img src="../assets/community.svg" alt="community">
+                        <span> Community </span>
                     </a>                    
                 </li>
 
@@ -76,7 +78,7 @@
             </div>
             <div class="post_comments_container">
                 <?php
-                    createComment();
+                    createComment($compostid);
                 ?>
             </div>
             

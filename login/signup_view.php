@@ -125,8 +125,8 @@
     
 </body>
 <script>
-        // redirect to home when the logo and title are clicked
-        let logo = document.getElementById('plogo');
+    // redirect to home when the logo and title are clicked
+    let logo = document.getElementById('plogo');
     logo.addEventListener('click', () => {
         window.location.href = "../index.php";
     });

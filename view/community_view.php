@@ -1,7 +1,9 @@
 <?php
 include "../settings/core.php";
+// checks user logged in, redirects to login if not
 checkLogin();
 include "../functions/community_fxn.php";
+include "../functions/user_fxn.php";
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +47,14 @@ include "../functions/community_fxn.php";
 
         <!-- Page Sidebar -->
         <div class="sidebar_container">
+            <p id="welcome"> Welcome,</p>
+            <!-- display name of current user -->
+            <?php displaycurrentuser() ?>;
             <ul class="menu">
                 <?php
                     $rid = checkRole();
+                    // checks for the user's role and hides restricted pages
+                    // hide creator pages if they are not a creator
                     if ($rid == 2)
                     {
                         echo
@@ -79,7 +86,6 @@ include "../functions/community_fxn.php";
                         <span> Community </span>
                     </a>                    
                 </li>
-
 
                 <li class="logout">
                     <a href="../login/logout_view.php">

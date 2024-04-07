@@ -1,5 +1,6 @@
 <?php
 include "../settings/core.php";
+include "../functions/analytics_fxn.php";
 checkLogin();
 $role = checkRole();
 if ($role != 2)
@@ -29,6 +30,9 @@ if ($role != 2)
 
         <!-- Page Sidebar -->
         <div class="sidebar_container">
+            <p id="welcome"> Welcome,</p>
+            <!-- display name of current user -->
+            <?php displaycurrentuser() ?>;
             <ul class="menu">
                 <li>
                     <a href="../view/posts_view.php">
@@ -43,13 +47,6 @@ if ($role != 2)
                     </a>                    
                 </li>
 
-                <li>
-                    <a href="../view/community_view.php">
-                        <img src="../assets/community.svg" alt="community">
-                        <span> Community </span>
-                    </a>                    
-                </li>
-
                 <li class="current">
                     <a href="../view/analytics_view.php">
                         <img src="../assets/analytics.svg" alt="analytics">
@@ -57,8 +54,15 @@ if ($role != 2)
                     </a>                    
                 </li>
 
+                <li>
+                    <a href="../view/community_view.php">
+                        <img src="../assets/community.svg" alt="community">
+                        <span> Community </span>
+                    </a>                    
+                </li>
+
                 <li class="logout">
-                    <a href="#">
+                    <a href="../login/logout_view.php">
                         <img src="../assets/logout.svg" alt="logout">
                         <span> Log out </span>
                     </a>                    
@@ -75,31 +79,43 @@ if ($role != 2)
                 <div class="counts">
                     <h2>Summary</h2>
                     <div class="item_card1" id="viewscard">
-                        <h2>Lifetime Posts</h2>
-                        <h2> <p>5</p> Views </h2>
+                        <h2>Lifetime Views</h2>
+                        <h2> 
+                            <?php displaynumviews(); ?>
+                            Views 
+                        </h2>
                     </div>
                     <div class="item_card1" id="totalposts_card"> 
                         <h2>Lifetime Posts</h2>
-                        <h2> <p>6</p> Posts </h2>
+                        <h2> 
+                            <?php displaynumposts(); ?>
+                            Posts 
+                        </h2>
                     </div>
                 </div>
                 
-                    <div class="items_card2" id="mostliked_card">
-                        <h2>Most Liked Post</h2>
-                        <p> Post title is rather long for the sake of testing</p>
-                        <div class="stat">
-                            <p> Category: Tag </p>
-                            <p class="comstat" id="comlike"> 8 Likes </p>
-                        </div>
-                    </div>
-                    <div class="items_card2" id="mostcommented_card">
-                        <h2>Most Commented Post</h2>
-                        <p> Post title is rather long for the sake of testing</p>
-                        <div class="stat">
-                            <p> Category: Tag </p>
-                            <p class="comstat" id="comcom"> 8 Comments </p>
-                        </div>
-                    </div> 
+                <div class="items_card2" id="mostliked_card">
+                            <!-- <h2>Most Liked Post</h2>
+                            <p> Post title is rather long for the sake of testing</p>
+                            <div class="stat">
+                                <p> Category: Tag </p>
+                                <p class="comstat" id="comlike"> 8 Likes </p>
+                            </div> -->
+                    <?php 
+                        displaymostlikedpost();
+                    ?>
+                </div> 
+                <div class="items_card2" id="mostcommented_card">
+                    <?php   
+                        displaymostcommentedpost(); 
+                    ?>
+                            <!-- <h2>Most Commented Post</h2>
+                            <p> Post title is rather long for the sake of testing</p>
+                            <div class="stat">
+                                <p> Category: Tag </p>
+                                <p class="comstat" id="comcom"> 8 Comments </p>
+                            </div> -->
+                </div> 
             </div>
 
         </div>

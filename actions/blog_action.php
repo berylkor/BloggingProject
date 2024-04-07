@@ -49,12 +49,22 @@ function createBlogPost($bloginfo, $spartend)
             {
                 echo mysqli_error($CON);
             }
-         
+        
+        // sql statement for counting post views
         $viewcount = "SELECT COUNT(*) AS countview FROM Views WHERE PID = '$pod'";
+        // execute the sql statement
         $viewcount_sql = mysqli_query($CON, $viewcount);
+        // collect results
         $viewcount_info = mysqli_fetch_assoc($viewcount_sql);  
         
+        // sql statement for counting post comments
+        $commentcount = "SELECT COUNT(*) AS countcomment FROM Comment WHERE PID = '$pod'";
+        // execute the sql statement
+        $commentcount_sql = mysqli_query($CON, $commentcount);
+        $commentcount_info = mysqli_fetch_assoc($commentcount_sql);
+
         echo
+            // echo the like, comment and view icons and their counts
             "<div class='user_action_icons_con'>
                 <div>
                     <p>".$blog["countLike"]."</p>
@@ -63,7 +73,7 @@ function createBlogPost($bloginfo, $spartend)
                     </a>
                 </div>
                 <div>
-                    <p>1</p>
+                    <p>".$commentcount_info["countcomment"]."</p>
                     <a href='../view/comment_view.php?key2=".$blog["PostID"]."'>
                         <img src='../assets/comment.svg' alt='comment icon'>
                     </a>

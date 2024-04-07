@@ -6,6 +6,7 @@
     {
         header("Location: ../view/community_view.php");
     };
+    include "../functions/user_fxn.php";
     include "../functions/selecttag_fxn.php";
 ?>
 <!DOCTYPE html>
@@ -29,6 +30,9 @@
 
         <!-- Page Sidebar -->
         <div class="sidebar_container">
+            <p id="welcome"> Welcome,</p>
+            <!-- display name of current user -->
+            <?php displaycurrentuser() ?>;
             <ul class="menu">
                 <li>
                     <a href="../view/posts_view.php">
@@ -44,16 +48,16 @@
                 </li>
 
                 <li>
-                    <a href="../view/community_view.php">
-                        <img src="../assets/community.svg" alt="community">
-                        <span> Community </span>
+                    <a href="../view/analytics_view.php">
+                        <img src="../assets/analytics.svg" alt="analytics">
+                        <span> Dashboard </span>
                     </a>                    
                 </li>
 
                 <li>
-                    <a href="../view/analytics_view.php">
-                        <img src="../assets/analytics.svg" alt="analytics">
-                        <span> Dashboard </span>
+                    <a href="../view/community_view.php">
+                        <img src="../assets/community.svg" alt="community">
+                        <span> Community </span>
                     </a>                    
                 </li>
 
