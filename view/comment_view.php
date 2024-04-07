@@ -1,7 +1,10 @@
 <?php
    include "../settings/core.php";
    include "../functions/comment_fxn.php";
+    //    checks if the user is logged in
    checkLogin();
+    //  stores the idea of the post the user is commenting on
+   $compostid = $_GET['key2'];
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="../view/analytics.php">
+                    <a href="../view/analytics_view.php">
                         <img src="../assets/analytics.svg" alt="analytics">
                         <span> Dashboard </span>
                     </a>                    
@@ -63,6 +66,7 @@
         <div class="cmain_container">
             <div class="comment_form_container">
                 <form action="../actions/comment_action.php" method="post">
+                    <input type="hidden" name="postid" value="<?php echo $compostid;?>">
                     <textarea name="content_forcoms" id="content_forcoms" cols="30" rows="10">Add your comment...</textarea>
                     <input type="submit" id="comsbtn" name="comsbtn" value="Comment">
                 </form>

@@ -30,7 +30,7 @@
             }
             else
             {
-                $_SESSION['user_not_found'] = "User not found";
+                echo $_SESSION['user_not_found'] = "User not found";
             }
         }
 

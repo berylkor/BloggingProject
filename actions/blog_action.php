@@ -64,7 +64,7 @@ function createBlogPost($bloginfo, $spartend)
                 </div>
                 <div>
                     <p>1</p>
-                    <a href='../view/comment_view.php'>
+                    <a href='../view/comment_view.php?key2=".$blog["PostID"]."'>
                         <img src='../assets/comment.svg' alt='comment icon'>
                     </a>
                 </div>
