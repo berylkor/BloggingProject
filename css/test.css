@@ -8,6 +8,11 @@ html, body
     height: 100%;
     font-family: 'Poppins', sans-serif;
 }
+
+body
+{
+    min-width: 676px;
+}
 /* ---- general syling ---- */
 .grid_container
 {
@@ -241,6 +246,39 @@ form > .sform_content
     font-size: 1.3rem;
 }
 
+#message
+{
+    display: none;
+    border-radius: 1rem;
+    background-color: #f7f2f2;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+
+.valid 
+{
+    color: green;
+}
+  
+.valid:before 
+{
+    position: relative;
+    left: -10px;
+    content: "✔";
+}
+
+.invalid 
+{
+    color: red;
+}
+  
+.invalid:before 
+{
+    position: relative;
+    left: -10px;
+    content: "✖";
+}
+
 /* ---- home page ---- */
 .hmain_container
 {
@@ -287,8 +325,6 @@ form > .sform_content
     font-size: 0.8rem;
     color: #150262;
 }
-
-
 
 .button 
 {
@@ -403,7 +439,7 @@ button#combtn
 
 .menu > li > a > *
 {
-    padding: 0.6rem;
+    padding:0 0.6rem 0.6rem 0.6rem;
 }
 
 .logout
@@ -430,13 +466,44 @@ button#combtn
 {
     display: grid;
     grid-template-rows: 45% 55%;
-    width: 95%;
+    width: 70%;
     height: 100%;
     border: none;
     border-radius: 1rem;
     background-color: #94b0f9;
 }
 
+@media screen and (max-width:928px){
+    .menu > li > a > img
+    {
+        width: 17%;
+    }
+    
+    .menu > li > a > span
+    {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 1380px){
+    .main_grid_container{
+        grid-template-columns: 20% 40% 40%;
+        grid-template-areas: "sidebar header header"
+                             "sidebar main main";
+    }
+}
+
+@media screen and (max-width: 1298px) {
+    .blogpost{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 966px){
+    .smain_container{
+        grid-template-columns: 100%;
+    }
+}
 .blogimage
 {   
     width: 100%;

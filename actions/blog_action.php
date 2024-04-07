@@ -42,20 +42,14 @@ function createBlogPost($bloginfo, $spartend)
                  "</p> </div> <div class='action_icons_container'>";
 
         $pod = $blog["PostID"];
-        static $called = false;
 
-        if (!$called) 
-        {
-            $called = true;
-        }else
-        {
             $view = "INSERT INTO Views (PID, whoViewed) VALUES ('$pod','$user')";
             $view_sql = mysqli_query($CON, $view);
             if(!$view_sql)
             {
                 echo mysqli_error($CON);
             }
-        } 
+         
         $viewcount = "SELECT COUNT(*) AS countview FROM Views WHERE PID = '$pod'";
         $viewcount_sql = mysqli_query($CON, $viewcount);
         $viewcount_info = mysqli_fetch_assoc($viewcount_sql);  
@@ -69,8 +63,10 @@ function createBlogPost($bloginfo, $spartend)
                     </a>
                 </div>
                 <div>
-                    <p>1</p> 
-                    <img src='../assets/comment.svg' alt='comment icon'>
+                    <p>1</p>
+                    <a href='../view/comment_view.php'>
+                        <img src='../assets/comment.svg' alt='comment icon'>
+                    </a>
                 </div>
                 <div>
                     <p>".$viewcount_info["countview"]."</p>  
