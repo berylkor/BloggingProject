@@ -1,9 +1,9 @@
 <?php
 include "../settings/core.php";
-// checks user logged in, redirects to login if not
-checkLogin();
 include "../functions/community_fxn.php";
 include "../functions/user_fxn.php";
+// checks user logged in, redirects to login if not
+checkLogin();
 ?>
 
 <!DOCTYPE html>

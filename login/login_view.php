@@ -62,16 +62,21 @@ if (isset($_SESSION['user_not_found'] ))
                     <div class="button_container">
                         <input type="submit" value="Login" id="login" name="login" onclick="return validateLogin()">
                     </div>
-
-
                 </form>
             </div>
-
+            <div id="message">
+                <div id="email_message">
+                    <h3 id="epresent" class="invalid">Email must be filled</h3>
+                </div>
+                <div id="pass_message">
+                    <h3 id="ppresent" class="invalid">Password must be filled</h3>
+                </div>
+            </div>
         </div>
     </div>
     
 </body>
-<script>
+<!-- <script>
     let logo = document.getElementById('plogo');
     logo.addEventListener('click', () => {
         window.location.href = "../index.php";
@@ -81,6 +86,6 @@ if (isset($_SESSION['user_not_found'] ))
     title.addEventListener('click', ()=> {
         window.location.href = "../index.php";
     })
-</script>
+</script> -->
 <script src="../js/login.js"></script>
 </html>

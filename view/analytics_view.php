@@ -3,10 +3,13 @@ include "../settings/core.php";
 include "../functions/analytics_fxn.php";
 checkLogin();
 $role = checkRole();
+// redirect user if not a creator
 if ($role != 2)
 {
     header("Location: ../view/community_view.php");
 };
+include "../functions/user_fxn.php";
+
 ?>
 
 <!DOCTYPE html>

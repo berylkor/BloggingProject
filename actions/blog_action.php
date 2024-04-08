@@ -69,7 +69,7 @@ function createBlogPost($bloginfo, $spartend)
                 <div>
                     <p>".$blog["countLike"]."</p>
                     <a href='../actions/like_action.php?key=".$blog["PostID"]."&key1=".$spartend."'>  
-                    <img src='../assets/like.svg' alt='like icon'>
+                        <img src='../assets/like.svg' alt='like icon'>
                     </a>
                 </div>
                 <div>

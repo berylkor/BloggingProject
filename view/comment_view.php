@@ -1,6 +1,7 @@
 <?php
    include "../settings/core.php";
    include "../functions/comment_fxn.php";
+   include "../functions/user_fxn.php";
     //    checks if the user is logged in
    checkLogin();
     //  stores the idea of the post the user is commenting on
@@ -28,7 +29,8 @@
         <!-- Page Sidebar -->
         <div class="sidebar_container">
             <p id="welcome"> Welcome,</p>
-            <p id="currentuser"> Beryl Koram</p>
+            <!-- display name of current user -->
+            <?php displaycurrentuser() ?>;
             <ul class="menu">
                 <li class="current">
                     <a href="../view/posts_view.php">

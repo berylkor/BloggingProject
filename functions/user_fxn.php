@@ -1,6 +1,5 @@
 <?php
     include "../settings/connection.php";
-
     // stores the id of the current user
     $current_user = $_SESSION["user_id"];
     // sql statement to find the details of current user
