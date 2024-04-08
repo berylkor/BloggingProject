@@ -65,7 +65,7 @@
                 if ($mostliked[0]["countLike"] > 0)
                 {
                     echo " <h2> Most Liked Post </h2>
-                      <p>".$mostliked[0]["postTitle"]."</p>
+                      <p> Title: ".$mostliked[0]["postTitle"]."</p>
                       <div class='stat'>
                         <p> Category: ".$mostliked[0]["TagName"]."</p>
                         <p class='comstat' id='comlike'>".$mostliked[0]["countLike"]." Likes</p>
@@ -92,7 +92,7 @@
     function displaymostcommentedpost()
     {
         global $mostcommented;
-        // print_r($mostcommented);
+        
         if (gettype($mostcommented) != "NULL")
         {
             if (!empty($mostcommented))
@@ -100,7 +100,7 @@
                 if ($mostcommented[0]["countComment"] > 0)
                 {
                 echo "<h2> Most Commented Post </h2>
-                 <p>".$mostcommented[0]["postTitle"]."</p>
+                 <p> Title: ".$mostcommented[0]["postTitle"]."</p>
                  <div class='stat'>
                     <p> Category: ".$mostcommented[0]["TagName"]."</p>
                     <p class='comstat' id='comcom'>".$mostcommented[0]["countComment"]." Comments</p>
@@ -108,8 +108,8 @@
                 }
                 else
                 {
-                    echo " <h2> Most Liked Post </h2>
-                    <p> No posts liked yet </p> ";
+                    echo " <h2> Most Commented Post </h2>
+                    <p> No posts commented yet </p> ";
                 }
             }else
             {

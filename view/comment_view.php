@@ -32,7 +32,7 @@
             <!-- display name of current user -->
             <?php displaycurrentuser() ?>;
             <ul class="menu">
-                <li class="current">
+                <li>
                     <a href="../view/posts_view.php">
                         <img src="../assets/post.svg" alt="post">
                         <span> Post </span>
@@ -83,7 +83,10 @@
                     createComment($compostid);
                 ?>
             </div>
-            
+            <div class="commentbacklink">
+                <a href="../view/blog_view.php?key=<?php $compostid;?>">Back</a>
+            </div>
+
         </div>
     <div>
 </body>

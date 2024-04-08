@@ -489,6 +489,10 @@ button#combtn
     border: none;
     border-radius: 1rem;
     background-color: #94b0f9;
+}
+
+.blogpost:hover
+{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -674,6 +678,30 @@ button#combtn
     border: none;
     border-radius: 1rem;
 }
+
+/* ---- Edit Page ---- */
+
+.editmain_container
+{
+    grid-area: main;
+    display: flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center;
+    width: 100%;
+}
+.editbacklink
+{
+    height: 15%;
+    display: flex;
+    align-items: end;
+}
+
+.editbacklink > a
+{
+    color: #444444;
+}
+
 /* ---- Posts Page ---- */
 
 .pmain_container
@@ -826,10 +854,15 @@ button#combtn
 .card_container
 {
     display: grid;
-    grid-template-rows: 39% 59%;
+    grid-template-rows: 39% 10% 49%;
     grid-template-columns: 30% 34% 34%;
     column-gap: 1rem;
-    padding: 0 1rem;   
+    padding: 0 1rem; 
+      /* sample */
+    grid-template-areas:
+      "summary like comment"
+      "goals goals goals"
+      "goalset goallike goalcomment";
 }
 
 .counts
@@ -852,8 +885,7 @@ button#combtn
 }
 
 .item_card1
-{
-    
+{   
     border-radius: 1rem;
     width: 95%;
     height: 30%;
@@ -959,13 +991,120 @@ button#combtn
     background-color: #fba8bd;
 }
 
+.card_container > h2
+{
+    grid-area: goals;
+    width: 100%;
+    color: #150762;
+    text-align: center;
+}
+
+.goalsform_container
+{
+    width: 100%;
+    height: 100%;
+}
+
+.goalsform_container > form
+{
+    height: 70%;
+    border-radius: 1rem;
+    background-color: #d9d9d9;
+    padding: 1rem;
+}
+
+.goalsform_container > form > *
+{
+    width: 95%;
+}
+
+.goalsform_container > form > h3
+{
+    font-size: 1.55rem;
+    font-weight: 300;
+}
+
+.goalsform_container > form > input[type="number"]
+{
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid ;
+    background-color: #d9d9d9;
+}
+
+.goalsform_container > form > input[type="submit"]
+{
+    border: none;
+    border-radius: 1rem;
+    background-color: #150262;
+    color: #ffffff;
+    height: 10%;
+    margin-top: 1rem;
+
+}
+
+.itemgoal_container
+{
+    /* border: 1px solid; */
+    border-radius: 1rem;
+    height: 70%;
+    padding: 1rem;
+    background-color: #d9d9d9;
+}
+
+.itemgoal_container > h3
+{
+    font-size: 1.55rem;
+    font-weight: 300;
+}
+
+.itemgoal_container > div, .itemgoal_container > span 
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.itemgoal_container > div > p
+{
+    margin: 0;
+}
+
+.itemgoal_container > p
+{
+    width: 100%;
+    text-align: right;
+    margin-top: 0;
+}
+
+#likeprogress, #commentprogress
+{
+    position: relative; 
+    overflow-y: hidden;
+    width: 95%;
+    height: 10%;
+    background: #8d8c8c;
+    border-radius: 1rem;
+    margin-top: 0.6rem;
+}
+
+#likeprogress::before, #commentprogress::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #150262;
+    width: var(--value);
+}
 
 /* ----- Comment Page ---- */
 .cmain_container
 {
     grid-area: main;
     display: grid;
-    grid-template-rows: 12% 8% 69%;
+    grid-template-rows: 12% 8% 69% 8%;
     row-gap: 2%;
 }
 
@@ -1037,4 +1176,14 @@ button#combtn
     padding-left: 2rem;
     padding-right: 2rem;
     background-color: #aaaaaa;
+}
+
+.commentbacklink
+{
+    text-align: center;
+}
+
+.commentbacklink > a
+{
+    color: #444444;
 }

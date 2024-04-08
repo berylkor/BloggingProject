@@ -57,6 +57,4 @@
         return $mostCommented_info;
     }
 
-
-
 ?>

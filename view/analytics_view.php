@@ -1,6 +1,7 @@
 <?php
 include "../settings/core.php";
 include "../functions/analytics_fxn.php";
+include "../functions/goals_fxn.php";
 checkLogin();
 $role = checkRole();
 // redirect user if not a creator
@@ -98,12 +99,6 @@ include "../functions/user_fxn.php";
                 </div>
                 
                 <div class="items_card2" id="mostliked_card">
-                            <!-- <h2>Most Liked Post</h2>
-                            <p> Post title is rather long for the sake of testing</p>
-                            <div class="stat">
-                                <p> Category: Tag </p>
-                                <p class="comstat" id="comlike"> 8 Likes </p>
-                            </div> -->
                     <?php 
                         displaymostlikedpost();
                     ?>
@@ -112,16 +107,63 @@ include "../functions/user_fxn.php";
                     <?php   
                         displaymostcommentedpost(); 
                     ?>
-                            <!-- <h2>Most Commented Post</h2>
-                            <p> Post title is rather long for the sake of testing</p>
-                            <div class="stat">
-                                <p> Category: Tag </p>
-                                <p class="comstat" id="comcom"> 8 Comments </p>
-                            </div> -->
                 </div> 
+
+                <h2 id="goaltitle"> Goals </h2>
+                <div class="goalsform_container">
+                    <form action="../actions/goals_action.php" method="post" name="goalform">
+                        <h3> Set Goals</h3>
+                        <input type="number" id="likegoal" name="likegoal" placeholder="Enter Like Goal">
+                        <input type="number" id="commentgoal" name="commentgoal" placeholder="Enter Comment Goal">
+                        <input type="submit" name="submitgoal" value="Set">
+                    </form>
+                </div>
+                <div class="itemgoal_container" id="likegoal_container">
+                    <h3>Likes</h3>
+                    <div id="likegoal">
+                        <p> Like Goal:</p>
+                        <?php
+                            getLikeGoal();
+                        ?>
+                    </div>
+                    <div id="likecount">
+                        <?php
+                            getLikeCount();
+                        ?>
+                    </div>
+                    <?php
+                        getLikesProgress();
+                    ?>
+                </div>
+                <div class="itemgoal_container" id="commentgoal_container">
+                    <h3>Comments</h3>
+                    <div id="commentgoal">
+                        <p> Comment Goal:</p>
+                        <?php
+                            getCommentGoal();
+                        ?>
+                    </div>
+                    <div id="commentcount">
+                        <?php
+                            getCommentCount();
+                        ?>
+                    </div>
+                    <!-- <span id="commentprogress" data-value="15%"></span>
+                    <p> 10%</p> -->
+                    <?php
+                        getCommentProgress();
+                    ?>
+                </div>
+                
             </div>
 
         </div>
     </div>
 </body>
+<script>
+    const progress = document.querySelectorAll('#likeprogress, #commentprogress');
+    progress.forEach(item => {
+        item.style.setProperty('--value', item.dataset.value)
+    })
+</script>
 </html>

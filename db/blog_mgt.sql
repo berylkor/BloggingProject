@@ -25,6 +25,8 @@ CREATE TABLE Users(
     Email varchar(100) NOT NULL,
     hashPassword varchar(255) NOT NULL,
     RID int(11) DEFAULT 1,
+    goalLikes int(11) DEFAULT 0,
+    goalComment int(11) DEFAULT 0,
     PRIMARY KEY (UserID),
     FOREIGN KEY (RID) REFERENCES Role (RoleID) ON DELETE CASCADE ON UPDATE CASCADE
 );
