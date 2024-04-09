@@ -85,6 +85,7 @@ function validateLogin(e){
                 title: "Login Successful",
                 icon: "success",
             });
+        event.preventDefault();    
     }
     
 }
