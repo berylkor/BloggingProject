@@ -16,6 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Draft</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
 </head>
 <body>
 

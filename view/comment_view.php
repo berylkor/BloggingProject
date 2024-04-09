@@ -4,8 +4,9 @@
    include "../functions/user_fxn.php";
     //    checks if the user is logged in
    checkLogin();
-    //  stores the idea of the post the user is commenting on
+    //  stores the id of the post the user is commenting on
    $compostid = $_GET['key2'];
+   $compostuserid = $_GET['key3'];
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comments</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
 </head>
 <body>
     <div class="main_grid_container">
@@ -84,7 +89,7 @@
                 ?>
             </div>
             <div class="commentbacklink">
-                <a href="../view/blog_view.php?key=<?php $compostid;?>">Back</a>
+                <a href="../view/blog_view.php?key=<?php echo $compostuserid;?>">Back</a>
             </div>
 
         </div>

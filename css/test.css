@@ -1041,7 +1041,25 @@ button#combtn
     color: #ffffff;
     height: 10%;
     margin-top: 1rem;
+}
 
+.goalsform_container > form > div
+{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goalsform_container > form > div > p
+{
+    display: inline;
+}
+
+.goalsform_container > form > div > p
+{
+    cursor: pointer;
 }
 
 .itemgoal_container

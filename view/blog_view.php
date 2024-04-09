@@ -1,7 +1,11 @@
 <?php
 include "../settings/connection.php";
-// include "../functions/user_fxn.php";
-include "../actions/blog_action.php"; 
+include "../actions/blog_action.php";
+
+if (!isset($_SESSION["user_id"]))
+{
+    header("Location: ../login/login_view.php");
+}
 // collect the ID of the user who posted
 $url = $_SERVER['REQUEST_URI'];
 $end = basename($url);
@@ -37,6 +41,10 @@ $bloginfo =  getbloginfo($spartend);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
 </head>
 
 <body>

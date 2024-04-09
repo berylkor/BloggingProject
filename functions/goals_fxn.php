@@ -58,10 +58,10 @@ function getLikesProgress()
         {
             $goalLike = $row["goalLikes"];
             $countLike = $row["countlikes"];
-            // calculate the user's progress towards like goals
-            $progress = number_format((($countLike / $goalLike) * 100), 2);
             if ($row["goalLikes"] > 0)
             {
+                // calculate the user's progress towards like goals
+                $progress = number_format((($countLike / $goalLike) * 100), 2);
                 // display user's progress bar and percenage
                 echo "<span id='likeprogress' data-value='".$progress."%'> </span> <p>".$progress."%</p>";
             } else
@@ -129,10 +129,10 @@ function getCommentProgress()
         {
             $goalComment = $row["goalComment"];
             $countComment = $row["countComments"];
-            // calculate the user's progress towards comment goals
-            $progress = number_format((($countComment / $goalComment) * 100), 2);
             if ($row["goalComment"] > 0)
             {
+                // calculate the user's progress towards comment goals
+                $progress = number_format((($countComment / $goalComment) * 100), 2);
                 // display user's progress bar and percenage
                 echo "<span id='commentprogress' data-value='".$progress."%'> </span> <p>".$progress."%</p>";
             } else

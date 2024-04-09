@@ -1,9 +1,9 @@
 <?php
 include "../settings/core.php";
-// check user logged in, redirect if not
-checkLogin();
 include "../functions/posts_fxn.php";
 include "../functions/user_fxn.php";
+// check user logged in, redirect if not
+checkLogin();
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,10 @@ include "../functions/user_fxn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
 </head>
 <body>
     <div class="main_grid_container">

@@ -4,6 +4,7 @@ let password = document.forms["Loginform"]["password"];
 // show message when email field is clicked
 email.onfocus = function()
 {
+    // display the message for email while hiding the password message
     document.getElementById("message").style.display = "block";
     document.getElementById("email_message").style.display = "block";
     document.getElementById("pass_message").style.display = "none";
@@ -27,6 +28,7 @@ email.onkeyup = function()
 
 password.onfocus = function()
 {
+    // display the message for password while hiding the email message
     document.getElementById("message").style.display = "block";
     document.getElementById("email_message").style.display = "none";
     document.getElementById("pass_message").style.display = "block";
@@ -66,3 +68,13 @@ function validateLogin(e){
     } 
     
 }
+
+let logo = document.getElementById('plogo');
+logo.addEventListener('click', () => {
+    window.location.href = "../index.php";
+});
+
+let title = document.getElementById('title');
+title.addEventListener('click', ()=> {
+    window.location.href = "../index.php";
+});

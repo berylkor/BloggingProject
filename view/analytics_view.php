@@ -2,6 +2,7 @@
 include "../settings/core.php";
 include "../functions/analytics_fxn.php";
 include "../functions/goals_fxn.php";
+// checks user logged in redirect if not
 checkLogin();
 $role = checkRole();
 // redirect user if not a creator
@@ -20,6 +21,10 @@ include "../functions/user_fxn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
     
 </head>
 <body>
@@ -116,6 +121,12 @@ include "../functions/user_fxn.php";
                         <input type="number" id="likegoal" name="likegoal" placeholder="Enter Like Goal">
                         <input type="number" id="commentgoal" name="commentgoal" placeholder="Enter Comment Goal">
                         <input type="submit" name="submitgoal" value="Set">
+                        <div>
+                            <p> Delete current goal? 
+                                <a href="../actions/delete_like_goal_action.php" style="color:black">like </a>
+                                <a href="../actions/delete_comment_goal_action.php" style="color:black;"> comment</a>
+                            </p>
+                        </div>
                     </form>
                 </div>
                 <div class="itemgoal_container" id="likegoal_container">
@@ -148,8 +159,6 @@ include "../functions/user_fxn.php";
                             getCommentCount();
                         ?>
                     </div>
-                    <!-- <span id="commentprogress" data-value="15%"></span>
-                    <p> 10%</p> -->
                     <?php
                         getCommentProgress();
                     ?>
