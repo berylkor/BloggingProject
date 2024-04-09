@@ -13,8 +13,6 @@ function getbloginfo($spartend)
             if (mysqli_num_rows($getblogposts_sql) > 0)
             {
                 $bloginfo = mysqli_fetch_all($getblogposts_sql, MYSQLI_ASSOC);
-                echo "00000";
-                exit;
                 return $bloginfo;
             }
         }else 
@@ -24,6 +22,5 @@ function getbloginfo($spartend)
     
 };
 
-getbloginfo(1);
 
 ?>
