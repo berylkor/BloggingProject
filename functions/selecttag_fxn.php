@@ -2,7 +2,7 @@
 include "../settings/connection.php";
 
 // select all data from the tag
-// $selecttag = "SELECT * FROM tag";
+$selecttag = "SELECT * FROM tag";
 // // query to get data
 // $selecttag_sql = mysqli_query($CON, $selecttag);
 
