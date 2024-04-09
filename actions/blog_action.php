@@ -23,6 +23,7 @@ function getbloginfo($spartend)
         }
     
 };
-  
+
+getbloginfo(1);
 
 ?>
