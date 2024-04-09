@@ -32,7 +32,7 @@ function displaycurrentuser()
 }
 
 // collect information for the blog
-// $bloginfo =  getbloginfo($spartend);
+$bloginfo =  getbloginfo($spartend);
 ?>
 
 <!DOCTYPE html>
