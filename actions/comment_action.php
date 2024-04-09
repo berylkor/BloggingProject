@@ -17,7 +17,7 @@ if (isset($_POST['comsbtn']))
     if (mysqli_query($CON, $sendcomment) && mysqli_query($CON, $count))
     {
         // redirect back to the same comment page they made the comment on
-        header("Location: ../view/comment_view.php?key2=".$postid);
+        header("Location: ../view/comment_view.php?key2='$postid'");
     }
     else
     {

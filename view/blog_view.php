@@ -112,5 +112,15 @@ $bloginfo =  getbloginfo($spartend);
             ?>
         </div>
 </body>
+<script>
+    let logo = document.getElementById('plogo');
+    logo.addEventListener('click', () => {
+        window.location.href = "../index.php";
+    });
 
+    let title = document.getElementById('title');
+    title.addEventListener('click', ()=> {
+        window.location.href = "../index.php";
+    })
+</script>
 </html>

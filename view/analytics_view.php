@@ -183,5 +183,15 @@ include "../functions/user_fxn.php";
     progress.forEach(item => {
         item.style.setProperty('--value', item.dataset.value)
     })
+
+    let logo = document.getElementById('plogo');
+    logo.addEventListener('click', () => {
+        window.location.href = "../index.php";
+    });
+
+    let title = document.getElementById('title');
+    title.addEventListener('click', ()=> {
+        window.location.href = "../index.php";
+    })
 </script>
 </html>
