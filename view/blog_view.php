@@ -7,9 +7,9 @@ if (!isset($_SESSION["user_id"]))
     header("Location: ../login/login_view.php");
 }
 // collect the ID of the user who posted
-$url = $_SERVER['REQUEST_URI'];
+$url = $_SERVER["REQUEST_URI"];
 $end = basename($url);
-$part = explode('=',$end);
+$part = explode("=",$end);
 $spartend = end($part);
 
 // stores the id of the current user
