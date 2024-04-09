@@ -8,10 +8,10 @@ function getbloginfo($spartend)
 
         $getblogposts = "SELECT Post.*, Users.fName AS fName, Users.lName AS lName, Tag.TagName AS tagName FROM Post INNER JOIN Users ON Post.UnID = Users.UserID INNER JOIN Tag ON Post.TID = Tag.TagID WHERE Post.UnID = '$spartend'";
         $getblogposts_sql = mysqli_query($CON, $getblogposts);
-        echo "00000";
-        exit;
         if ($getblogposts_sql)
         {
+            echo "00000";
+            exit;
             if (mysqli_num_rows($getblogposts_sql) > 0)
             {
                 $bloginfo = mysqli_fetch_all($getblogposts_sql, MYSQLI_ASSOC);
