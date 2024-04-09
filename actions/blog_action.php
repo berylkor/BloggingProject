@@ -18,6 +18,8 @@ function getbloginfo($spartend)
             if (mysqli_num_rows($getblogposts_sql) > 0)
             {
                 $bloginfo = mysqli_fetch_all($getblogposts_sql, MYSQLI_ASSOC);
+                var_dump($bloginfo);
+                exit;
                 return $bloginfo;
             }
         }else 
