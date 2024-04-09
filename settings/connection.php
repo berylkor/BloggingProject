@@ -1,10 +1,8 @@
 <?php
 
 // variables for setting connection to databse
-// $SERVER = "localhost";
-// $USERNAME = "root"; 4406
-$SERVER = "172.187.229.113";
-$USERNAME = "beryl";
+$SERVER = "localhost";
+$USERNAME = "root";
 $PASSWORD = "";
 $DATABASE = "blog_mgt";
 
