@@ -1,6 +1,6 @@
 <?php
 include "../settings/connection.php";
-// include "../actions/blog_action.php";
+include "../actions/blog_action.php";
 session_start();
 if (!isset($_SESSION["user_id"]))
 {
