@@ -1,7 +1,7 @@
 <?php
     include "../settings/core.php";
     include "../functions/user_fxn.php";
-    // include "../functions/selecttag_fxn.php";
+    include "../functions/selecttag_fxn.php";
     checkLogin();
     $role = checkRole();
     if ($role != 2)
