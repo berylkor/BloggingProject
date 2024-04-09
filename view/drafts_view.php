@@ -1,13 +1,13 @@
 <?php
     include "../settings/core.php";
+    include "../functions/user_fxn.php";
+    include "../functions/selecttag_fxn.php";
     checkLogin();
     $role = checkRole();
     // if ($role != 2)
     // {
     //     header("Location: ../view/community_view.php");
     // };
-    // include "../functions/user_fxn.php";
-    // include "../functions/selecttag_fxn.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
