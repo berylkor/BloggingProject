@@ -23,7 +23,7 @@ function createTagDropdown()
     foreach ($selecttag_data as $row)
     {
         // echo each tag as an option of the dropdown
-        echo "<option value=".$row['TagID'].">".$row['TagName']."</option>";
+        echo "<option value=".$row["TagID"].">".$row["TagName"]."</option>";
     }
 }
 
