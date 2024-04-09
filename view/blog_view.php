@@ -31,7 +31,7 @@ include "../settings/connection.php";
 // }
 
 // collect information for the blog
-$bloginfo =  getbloginfo($spartend);
+// $bloginfo =  getbloginfo($spartend);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ $bloginfo =  getbloginfo($spartend);
         <div class="sidebar_container">
             <p>Welcome,</p>
             <!-- display name of current user -->
-            <?php displaycurrentuser() ?>; 
+            <!-- <?php displaycurrentuser() ?>;  -->
             <ul class="menu">
                 <?php
                     $rid = checkRole();
