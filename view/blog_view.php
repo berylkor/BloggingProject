@@ -1,6 +1,7 @@
 <?php
-include "../settings/connection.php";
-include "../actions/blog_action.php";
+include_once "../settings/connection.php";
+include_once "../actions/blog_action.php";
+include_once "../functions/blog_fxn.php";
 session_start();
 if (!isset($_SESSION["user_id"]))
 {
