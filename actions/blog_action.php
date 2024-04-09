@@ -5,12 +5,7 @@ include_once "../settings/core.php";
 function getbloginfo($spartend)
 {
     global $CON;
-    if (isset($_SERVER["HTTP"]) && $_SERVER["HTTP"]==="on")
-    {  
-        header("Location: ../view/community_view.php");
-    }
-    else
-    {
+
         $getblogposts = "SELECT Post.*, Users.fName AS fName, Users.lName AS lName, Tag.TagName AS tagName FROM POST INNER JOIN Users ON Post.UnID = Users.UserID INNER JOIN Tag ON Post.TID = Tag.TagID WHERE Post.UnID = '$spartend'";
         $getblogposts_sql = mysqli_query($CON, $getblogposts);
         if ($getblogposts_sql)
@@ -24,7 +19,7 @@ function getbloginfo($spartend)
         {
             mysqli_error($CON);
         }
-    }
+    
 };
   
 
