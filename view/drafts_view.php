@@ -4,10 +4,10 @@
     // include "../functions/selecttag_fxn.php";
     checkLogin();
     $role = checkRole();
-    // if ($role != 2)
-    // {
-    //     header("Location: ../view/community_view.php");
-    // };
+    if ($role != 2)
+    {
+        header("Location: ../view/community_view.php");
+    };
 ?>
 <!DOCTYPE html>
 <html lang="en">
