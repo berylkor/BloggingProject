@@ -16,16 +16,16 @@ if ($selecttag_sql)
     echo mysqli_error($CON);
 }
 
-// function createTagDropdown()
-// {
-//     global $selecttag_data;
-//     // iterate through the data
-//     foreach ($selecttag_data as $row)
-//     {
-//         // echo each tag as an option of the dropdown
-//         echo "<option value=".$row['TagID'].">".$row['TagName']."</option>";
-//     }
-// }
+function createTagDropdown()
+{
+    global $selecttag_data;
+    // iterate through the data
+    foreach ($selecttag_data as $row)
+    {
+        // echo each tag as an option of the dropdown
+        echo "<option value=".$row['TagID'].">".$row['TagName']."</option>";
+    }
+}
 
 
 ?>
