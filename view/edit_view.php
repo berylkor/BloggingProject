@@ -11,17 +11,7 @@ if ($role != 2)
     header("Location: ../view/community_view.php");
 };
 
-if (isset($_SERVER['HTTP']) && $_SERVER['HTTP']==='on')
-{  
-    header("Location: ../view/posts_view.php");
-}
-else
-{
-    $url = $_SERVER['REQUEST_URI'];
-    $end = basename($url);
-    $part = explode('=',$end);
-    $partend = end($part);
-} 
+    $partend = $_GET["KEY"]; 
 
 ?>
 
