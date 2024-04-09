@@ -80,6 +80,12 @@ function validateLogin(e){
         });
         event.preventDefault();
     } 
+        else {
+            Swal.fire({
+                title: "Login Successful",
+                icon: "success",
+            });
+    }
     
 }
 
