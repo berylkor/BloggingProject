@@ -1,7 +1,7 @@
 <?php
     include "../settings/core.php";
     checkLogin();
-    // $role = checkRole();
+    $role = checkRole();
     // if ($role != 2)
     // {
     //     header("Location: ../view/community_view.php");
