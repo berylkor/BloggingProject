@@ -2,33 +2,33 @@
 include "../settings/connection.php";
 include "../actions/blog_action.php";
 
-if (!isset($_SESSION["user_id"]))
-{
-    header("Location: ../login/login_view.php");
-}
-// collect the ID of the user who posted
-$url = $_SERVER['REQUEST_URI'];
-$end = basename($url);
-$part = explode('=',$end);
-$spartend = end($part);
+// if (!isset($_SESSION["user_id"]))
+// {
+//     header("Location: ../login/login_view.php");
+// }
+// // collect the ID of the user who posted
+// $url = $_SERVER['REQUEST_URI'];
+// $end = basename($url);
+// $part = explode('=',$end);
+// $spartend = end($part);
 
-// stores the id of the current user
-$current_user = $_SESSION["user_id"];
-// sql statement to find the details of current user
-$getuser = "SELECT * FROM Users WHERE UserID = '$current_user'";
-// execute sql statement
-$getuser_sql = mysqli_query($CON, $getuser);
-// fetch the results 
-$getuser_info = mysqli_fetch_all($getuser_sql, MYSQLI_ASSOC);
+// // stores the id of the current user
+// $current_user = $_SESSION["user_id"];
+// // sql statement to find the details of current user
+// $getuser = "SELECT * FROM Users WHERE UserID = '$current_user'";
+// // execute sql statement
+// $getuser_sql = mysqli_query($CON, $getuser);
+// // fetch the results 
+// $getuser_info = mysqli_fetch_all($getuser_sql, MYSQLI_ASSOC);
 
-function displaycurrentuser()
-{
-    global $getuser_info;
-    foreach ($getuser_info as $user)
-    {
-        echo "<p>".$user["fName"]." ".$user["lName"]."</p>";
-    }
-}
+// function displaycurrentuser()
+// {
+//     global $getuser_info;
+//     foreach ($getuser_info as $user)
+//     {
+//         echo "<p>".$user["fName"]." ".$user["lName"]."</p>";
+//     }
+// }
 
 // collect information for the blog
 $bloginfo =  getbloginfo($spartend);
@@ -110,7 +110,7 @@ $bloginfo =  getbloginfo($spartend);
         <div class="pmain_container">
             <?php
             // display blog of the user that they clicked their post
-                createBlogPost($bloginfo, $spartend);
+                // createBlogPost($bloginfo, $spartend);
             ?>
         </div>
 </body>
