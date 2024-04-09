@@ -7,6 +7,8 @@ function getbloginfo($spartend)
     global $CON;
 
         $getblogposts = "SELECT Post.*, Users.fName AS fName, Users.lName AS lName, Tag.TagName AS tagName FROM Post INNER JOIN Users ON Post.UnID = Users.UserID INNER JOIN Tag ON Post.TID = Tag.TagID WHERE Post.UnID = '$spartend'";
+        echo "00000";
+        exit;
         $getblogposts_sql = mysqli_query($CON, $getblogposts);
         if ($getblogposts_sql)
         {
