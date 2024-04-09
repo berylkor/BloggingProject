@@ -1,6 +1,6 @@
 <?php
     include "../settings/core.php";
-    // checkLogin();
+    checkLogin();
     // $role = checkRole();
     // if ($role != 2)
     // {
