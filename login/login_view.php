@@ -14,6 +14,7 @@ if (isset($_SESSION['user_not_found'] ))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
     <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -81,6 +82,6 @@ if (isset($_SESSION['user_not_found'] ))
     </div>
     
 </body>
-
+<script src="sweetalert2.min.js"></script>
 <script src="../js/login.js"></script>
 </html>

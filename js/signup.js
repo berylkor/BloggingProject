@@ -281,36 +281,86 @@
         let password = document.forms["Signupform"]["password"].value;
         let spassword = document.forms["Signupform"]["spassword"].value;
         if (fname == "") {
-        alert("First Name must be filled");
+        // alert("First Name must be filled");
+        swal({
+            title: "First Name must be filled",
+            icon: "warning",
+        })
         event.preventDefault();
         } else if (!/^[a-zA-Z]+([' -][a-zA-Z]+)?$/.test(fname)) {
-            alert("Please enter a valid first name");
+            // alert("Please enter a valid first name");
+            swal({
+                title: "Incorrect Entry",
+                text: "Please enter a valid first name",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (lname == "") {
-            alert("Last Name must be filled");
+            // alert("Last Name must be filled");
+            swal({
+                title: "Last Name must be filled",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (!/^[a-zA-Z]+([ '-][a-zA-Z]+)*/.test(lname)) {
-            alert("Please enter a valid last name");
+            // alert("Please enter a valid last name");
+            swal({
+                title: "Incorrect Entry",
+                text: "Please enter a valid last name",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (email == "") {
-            alert("Email must be filled");
+            // alert("Email must be filled");
+            swal({
+                title: "Email must be filled",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
-            alert("Please enter a valid email address");
+            // alert("Please enter a valid email address");
+            swal({
+                title: "Incorrect Entry",
+                text: "Please enter a valid email address",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (password == "") {
-            alert("Please enter a password");
+            // alert("Please enter a password");
+            swal({
+                title: "Please enter a password",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
-            alert("Please enter a valid password");
+            // alert("Please enter a valid password");
+            swal({
+                title: "Incorrect Entry",
+                text: "Please enter a valid password",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(spassword)) {
-            alert("Please enter a valid password");
+            // alert("Please enter a valid password");
+            swal({
+                title: "Incorrect Entry",
+                text: "Please enter a valid password",
+                icon: "warning",
+            });
             event.preventDefault();
         } else if (password !== spassword) {
-            alert("Password does not match");
+            // alert("Password does not match");
+            swal({
+                title: "Incorrect Entry",
+                text: "Password does not match",
+                icon: "warning",
+            });
             event.preventDefault();
         } else {
+            swal({
+                title: "Signup Successful",
+                icon: "success",
+            });
             event.preventDefault();
             usersignup();
         }

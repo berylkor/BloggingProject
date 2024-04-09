@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../assets/favicon_io/site.webmanifest">
     <link rel="shortcut icon" href="../assets/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -101,35 +102,57 @@
                 </form>
                 </div>
                 <div id="message">
-                            <div id="name_message">
-                                <h3 id="fname_title">First Name must contain the following:</h3>
-                                <h3 id="lname_title">Last Name must contain the following:</h3>
-                                <p id="present" class="invalid"> <b> Minimum </b> 1 letter </p>
-                                <p id="upperlower" class="invalid"> <b>Upper or lowercase</b> letters</p>   
-                            </div>
-                            <div id="email_message">
-                                <h3>Email must contain the following:</h3>
-                                <p id="epresent" class="invalid"> <b> Minimum </b> 1 letter </p>
-                                <p id="atpresent" class="invalid"> <b> @ </b> sign </p>
-                            </div>
-                            <div id="pass_message">
-                                <h3>Password must contain the following:</h3>
-                                <p id="lower" class="invalid">A <b>lowercase</b> letter</p>
-                                <p id="upper" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                                <p id="val_number" class="invalid">A <b>number</b></p>
-                                <p id="val_length" class="invalid">Minimum <b>8 characters</b></p>
-                            </div>
-                            <div id="conpass_message">
-                                <h3> Confirm Password:</h3>
-                                <p id="cpresent" class="invalid"> Minimum <b>8 characters</b> </p>
-                                <p id="match" class="invalid"> Match password </p>
-                            </div>
+                    <div id="name_message">
+                    <h3 id="fname_title">First Name must contain the following:</h3>
+                    <h3 id="lname_title">Last Name must contain the following:</h3>
+                    <p id="present" class="invalid"> <b> Minimum </b> 1 letter </p>
+                    <p id="upperlower" class="invalid"> <b>Upper or lowercase</b> letters</p>   
+                </div>
+                <div id="email_message">
+                    <h3>Email must contain the following:</h3>
+                    <p id="epresent" class="invalid"> <b> Minimum </b> 1 letter </p>
+                    <p id="atpresent" class="invalid"> <b> @ </b> sign </p>
+                </div>
+                <div id="pass_message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="lower" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="upper" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="val_number" class="invalid">A <b>number</b></p>
+                    <p id="val_length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <div id="conpass_message">
+                    <h3> Confirm Password:</h3>
+                    <p id="cpresent" class="invalid"> Minimum <b>8 characters</b> </p>
+                    <p id="match" class="invalid"> Match password </p>
+                </div>
             </div>
+            <template id="firstname-template">
+                <swal-title>
+                    First Name must be filled
+                </swal-title>
+                <swal-icon type="warning" color="red"></swal-icon>
+                <!-- <swal-button type="confirm">
+                    Save As
+                </swal-button>
+                <swal-button type="cancel">
+                    Cancel
+                </swal-button>
+                <swal-button type="deny">
+                    Close without Saving
+                </swal-button> -->
+                <swal-param name="allowEscapeKey" value="false" />
+                <swal-param
+                    name="customClass"
+                    value='{ "popup": "my-popup" }' />
+                <swal-function-param
+                    name="didOpen"
+                    value="popup => console.log(popup)" />
+            </template>
         </div>
     </div>
     
 </body>
-
+<script src="sweetalert2.min.js"></script>
 <script src="../js/signup.js"></script>
 
 </html>
