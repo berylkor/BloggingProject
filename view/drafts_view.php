@@ -82,7 +82,7 @@
                         <select name="tagopt" id="tagopt">
                             <option value="0">Select Tag</option>
                             <?php
-                                // createTagDropdown();
+                                createTagDropdown();
                             ?>
                         </select>
                     </div>
