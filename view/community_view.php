@@ -124,26 +124,15 @@ checkLogin();
 
     const popup = document.getElementById("popup");
     const close = document.getElementById("close")[0];
-
+    // display popup 
     function showPopup()
     {
         popup.style.display = "block";
     }
-
+    // if they click the check box for changing user role call the function
     let change = document.getElementById("changeuser")
     change.addEventListener('click', ()=>{
         showPopup();
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-    const close = document.getElementById("close");
-
-    if (close) 
-    { 
-        close.addEventListener('click', () => {
-            hidePopup();
-        });
-    }
     });
 
     function hidePopup() 
@@ -152,6 +141,18 @@ checkLogin();
         popup.style.display = "none";
     }
 
+    document.addEventListener("DOMContentLoaded", () => {
+    const close = document.getElementById("close");
+        // close the popup if they click any area outside of the popup
+    if (close) 
+    { 
+        close.addEventListener('click', () => {
+            hidePopup();
+        });
+    }
+    });
+    
+    // hide popup if they click on the "X"
     window.addEventListener('click', (event) => {
         if (event.target == popup){
             hidePopup();

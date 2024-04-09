@@ -74,9 +74,13 @@
         </div>
         <div class="cmain_container">
             <div class="comment_form_container">
+                <!-- form for adding comments -->
                 <form action="../actions/comment_action.php" method="post">
+                    <!-- hidden field for post id -->
                     <input type="hidden" name="postid" value="<?php echo $compostid;?>">
+                    <!-- comment enrty -->
                     <textarea name="content_forcoms" id="content_forcoms" cols="30" rows="10">Add your comment...</textarea>
+                    <!-- comment submit button -->
                     <input type="submit" id="comsbtn" name="comsbtn" value="Comment">
                 </form>
             </div>
@@ -85,10 +89,12 @@
             </div>
             <div class="post_comments_container">
                 <?php
+                // display comments made on that page
                     createComment($compostid);
                 ?>
             </div>
             <div class="commentbacklink">
+                <!-- link back to the blog view of the post commented on -->
                 <a href="../view/blog_view.php?key=<?php echo $compostuserid;?>">Back</a>
             </div>
 

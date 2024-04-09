@@ -136,6 +136,7 @@
 
     email.onkeyup = function()
     {
+        // validate at sign 
         var valatsign = /@/;
         if(email.value.match(valatsign))
         {
@@ -318,18 +319,23 @@
 
 function usersignup()
 {
+    // create a new request object
     const xhttp = new XMLHttpRequest();
 
+    // function to direct to the login page after the request is sent
     xhttp.onload = function () {
         if (xhttp.status === 200) {
         document.location.href = "../login/login_view.php";
         }
     };
 
+    // initiate a method for post request to signup action
     xhttp.open("POST", "../actions/signup_action.php", true)
 
+    // submit data
     xhttp.setRequestHeader("Content-type", "application/json");
 
+    // data to be sent 
     let signupData = {
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
@@ -337,8 +343,10 @@ function usersignup()
         password: document.getElementById("password").value,
     }
 
+    // convert data to JSON
     let signup = JSON.stringify(signupData);
 
+    // send the data
     xhttp.send(signup);
 
 }

@@ -69,6 +69,7 @@ if (isset($_SESSION['user_not_found'] ))
                 </form>
             </div>
             <div id="message">
+                <!-- message for validation -->
                 <div id="email_message">
                     <h3 id="epresent" class="invalid">Email must be filled</h3>
                 </div>

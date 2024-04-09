@@ -40,6 +40,7 @@ function getLikeCount()
                 echo "<p> Current Like Count: </p> <p>".$row["countlikes"]."</p>";
             } else
             {
+                // display nothing if the goal is not get
                 echo "<p> </p>";
             }
         }

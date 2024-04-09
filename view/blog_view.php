@@ -63,6 +63,8 @@ $bloginfo =  getbloginfo($spartend);
             <ul class="menu">
                 <?php
                     $rid = checkRole();
+                    // checks for the user's role and hides restricted pages
+                    // hide creator pages if they are not a creator
                     if ($rid == 2)
                     {
                         echo
@@ -107,6 +109,7 @@ $bloginfo =  getbloginfo($spartend);
         
         <div class="pmain_container">
             <?php
+            // display blog of the user that they clicked their post
                 createBlogPost($bloginfo, $spartend);
             ?>
         </div>

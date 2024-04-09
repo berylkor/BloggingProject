@@ -52,7 +52,7 @@ password.onkeyup = function()
 function validateLogin(e){
     let email = document.forms["Loginform"]["email"].value;
     let password = document.forms["Loginform"]["password"].value;
-
+    // validate fields when the login button is clicked
     if (email == "") {
         alert("Email must be filled");
         event.preventDefault();

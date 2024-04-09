@@ -116,6 +116,7 @@ include "../functions/user_fxn.php";
 
                 <h2 id="goaltitle"> Goals </h2>
                 <div class="goalsform_container">
+                    <!--goal form  -->
                     <form action="../actions/goals_action.php" method="post" name="goalform">
                         <h3> Set Goals</h3>
                         <input type="number" id="likegoal" name="likegoal" placeholder="Enter Like Goal">
@@ -134,15 +135,18 @@ include "../functions/user_fxn.php";
                     <div id="likegoal">
                         <p> Like Goal:</p>
                         <?php
+                        // display user's like goal
                             getLikeGoal();
                         ?>
                     </div>
                     <div id="likecount">
                         <?php
+                        // display users current like goal if they have set a goal
                             getLikeCount();
                         ?>
                     </div>
                     <?php
+                    // display progress bar and percentage
                         getLikesProgress();
                     ?>
                 </div>
@@ -151,15 +155,18 @@ include "../functions/user_fxn.php";
                     <div id="commentgoal">
                         <p> Comment Goal:</p>
                         <?php
+                        // display comment goal
                             getCommentGoal();
                         ?>
                     </div>
                     <div id="commentcount">
                         <?php
+                        // display their current comment count if they have set a goal
                             getCommentCount();
                         ?>
                     </div>
                     <?php
+                    // display the progress bar 
                         getCommentProgress();
                     ?>
                 </div>
@@ -170,7 +177,9 @@ include "../functions/user_fxn.php";
     </div>
 </body>
 <script>
+    // variable for the progress bar
     const progress = document.querySelectorAll('#likeprogress, #commentprogress');
+    // set the value of the var(--value) of the progress bar in css to the value of the progress span
     progress.forEach(item => {
         item.style.setProperty('--value', item.dataset.value)
     })

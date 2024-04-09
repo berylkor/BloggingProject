@@ -106,16 +106,19 @@ else
                         </select>
                     </div>
                     <!-- hidden field to collect the ID of the post being edited -->
-                    <input type="hidden" name="id" value="<?php echo $partend; ?>">      
+                    <input type="hidden" name="id" value="<?php echo $partend; ?>">  
+                        <!-- post title field -->
                     <div class="blogentry_title">
-                            <input type="text" placeholder="Give your post a new title here...." id="title_value" name="blogtitle">
+                        <input type="text" placeholder="Give your post a new title here...." id="title_value" name="blogtitle">
                     </div>
-                        <div class="blogentry_content">
-                            <textarea rows="8" cols="55" id="content_value" name="blogcontent"> </textarea>
-                        </div>
-                        <div class="blogentry_submit">
-                            <input type="submit" name="submit" value="Post" id="bsubmit_value" class="bsubmit_value">
-                        </div>
+                    <!-- post content field -->
+                    <div class="blogentry_content">
+                        <textarea rows="8" cols="55" id="content_value" name="blogcontent"> </textarea>
+                    </div>
+                    <!-- submit button -->
+                    <div class="blogentry_submit">
+                        <input type="submit" name="submit" value="Post" id="bsubmit_value" class="bsubmit_value">
+                    </div>
                 </form>
             </div>
 

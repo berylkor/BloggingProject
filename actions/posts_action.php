@@ -3,7 +3,7 @@
 function getcreatorPosts()
 {
     global $CON;
-    $userid = $_SESSION['user_id'];
+    $userid = $_SESSION["user_id"];
     $getposts = "SELECT * FROM Post WHERE UnID = '$userid'";
     $getposts_sql = mysqli_query($CON, $getposts);
 

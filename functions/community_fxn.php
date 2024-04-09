@@ -11,8 +11,11 @@
             foreach ($getpost as $post)
             {
                 $id = $post["PostID"];
+                // select the post creator's name and the post's tag
                 $details = "SELECT Users.fName, Users.lName, Tag.TagName FROM Post INNER JOIN Users ON Post.UnID = Users.UserID INNER JOIN Tag ON Post.TID = Tag.TagID WHERE Post.PostID='$id'";
+                // execute the query
                 $details_sql = mysqli_query($CON, $details);
+                // fetch results
                 $details_value = mysqli_fetch_assoc($details_sql);
                 $fName = $details_value["fName"];
                 $lName = $details_value["lName"];

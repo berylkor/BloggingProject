@@ -12,6 +12,7 @@ $CON = mysqli_connect($SERVER, $USERNAME, $PASSWORD, $DATABASE);
 // check the connection worked
 if (mysqli_connect_errno())
 {
+    // error message
     die ("Connection error:". mysqli_connect_errno());
 }
 ?>

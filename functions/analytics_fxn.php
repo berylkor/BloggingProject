@@ -62,6 +62,7 @@
         {
             if (!empty($mostliked))
             {
+                // if the count of likes is not zero display the details of the most liked post
                 if ($mostliked[0]["countLike"] > 0)
                 {
                     echo " <h2> Most Liked Post </h2>
@@ -73,17 +74,20 @@
                 }
                 else
                 {
+                    // display a message if the count like is zero
                     echo " <h2> Most Liked Post </h2>
                         <p> No posts liked yet </p> ";
                 }
             }else
             {
+                // display message if the variable is empty
                 echo " <h2> Most Liked Post </h2>
                        <p> No posts liked yet </p> ";
             }
         }
         else
         {
+            // display message if the variable return null
             echo "<h2> Most Liked Post </h2>
                   <p> No posts liked yet </p> ";
         }
@@ -97,6 +101,7 @@
         {
             if (!empty($mostcommented))
             {
+                // if the count of comments is not zero display the details of the most liked post
                 if ($mostcommented[0]["countComment"] > 0)
                 {
                 echo "<h2> Most Commented Post </h2>
@@ -108,17 +113,20 @@
                 }
                 else
                 {
+                    // display a message if the count comment is zero
                     echo " <h2> Most Commented Post </h2>
-                    <p> No posts commented yet </p> ";
+                        <p> No posts commented yet </p> ";
                 }
             }else
             {
+                // display message if the variable is empty
                 echo "<h2> Most Commented Post </h2>
                   <p> No posts commented yet </p>";
             }
         }
         else
         {
+            // display message if the variable return null
             echo "<h2> Most Commented Post </h2>
                   <p> No posts commented yet </p>";
         }

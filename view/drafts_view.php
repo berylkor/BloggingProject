@@ -86,12 +86,15 @@
                             ?>
                         </select>
                     </div>
+                    <!-- post title -->
                     <div class="blogentry_title">
                         <input type="text" placeholder="Give your post a title here...." id="title_value" name="blogtitle">
                     </div>
+                    <!-- post content -->
                     <div class="blogentry_content">
                         <textarea rows="8" cols="55" id="content_value" name="blogcontent"> </textarea>
                     </div>
+                    <!-- submit button -->
                     <div class="blogentry_submit">
                         <input type="submit" name="submit" value="Post" id="bsubmit_value" class="bsubmit_value">
                     </div>
