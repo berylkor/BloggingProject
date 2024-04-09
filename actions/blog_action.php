@@ -5,7 +5,7 @@ include "../settings/core.php";
 function getbloginfo($spartend)
 {
     global $CON;
-    if (isset($_SERVER['HTTP']) && $_SERVER['HTTP']==='on')
+    if (isset($_SERVER["HTTP"]) && $_SERVER["HTTP"]==="on")
     {  
         header("Location: ../view/community_view.php");
     }
@@ -36,9 +36,9 @@ function createBlogPost($bloginfo, $spartend)
     foreach ($bloginfo as $blog)
     {         
         echo "<div class='pblogpost'> <div class='blogimage' id='blogimage'><img src='../assets/".
-                $blog['tagName']."tag.jpg' alt='tag'> </div> <div class='pblog_content'> <div id='tag_con'> <div class='tag'>".
-                $blog['tagName']."</div> <div class='post_info'> <img src='../assets/account.svg' alt='icon'> <p>".
-                $blog['fName']. " ".$blog['lName']."</p> </div> </div> <div id='pblog_value'> <h4>".$blog["postTitle"]."<p>".$blog["postContent"]. 
+                $blog["tagName"]."tag.jpg' alt='tag'> </div> <div class='pblog_content'> <div id='tag_con'> <div class='tag'>".
+                $blog["tagName"]."</div> <div class='post_info'> <img src='../assets/account.svg' alt='icon'> <p>".
+                $blog["fName"]. " ".$blog["lName"]."</p> </div> </div> <div id='pblog_value'> <h4>".$blog["postTitle"]."<p>".$blog["postContent"]. 
                  "</p> </div> <div class='action_icons_container'>";
 
         $pod = $blog["PostID"];
