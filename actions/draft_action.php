@@ -4,6 +4,8 @@
 
     if(isset($_POST['submit']))
     {
+        echo "0";
+        exit;
         // collect data from the drafts form 
         $title= mysqli_real_escape_string($CON, $_POST['blogtitle']);
         $content = mysqli_real_escape_string($CON, $_POST['blogcontent']);
