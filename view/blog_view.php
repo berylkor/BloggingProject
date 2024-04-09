@@ -108,7 +108,7 @@ function displaycurrentuser()
         <div class="pmain_container">
             <?php
             // display blog of the user that they clicked their post
-                createBlogPost($bloginfo, $spartend);
+                // createBlogPost($bloginfo, $spartend);
             ?>
         </div>
 </body>
