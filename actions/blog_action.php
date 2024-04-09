@@ -1,6 +1,6 @@
 <?php
-include "../settings/connection.php";
-include "../settings/core.php";
+include_once "../settings/connection.php";
+include_once "../settings/core.php";
 
 function getbloginfo($spartend)
 {
