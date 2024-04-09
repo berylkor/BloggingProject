@@ -24,7 +24,7 @@
                 $tag = $details_value["TagName"];
                 // display the post
                 echo "<div class='pblogpost'> <div class='blogimage' id='blogimage'><img src='../assets/".
-                     $tag."tag.jpg' alt=".$tag."tag'> </div> <div class='pblog_content'> <div id='tag_con'> <div class='tag'>".
+                     $tag."tag.jpg' alt='".$tag."tag'> </div> <div class='pblog_content'> <div id='tag_con'> <div class='tag'>".
                      $tag."</div> <div class='post_info'> <img src='../assets/account.svg' alt='icon'> <p>".
                      $fName." ".$lName."</p> </div> </div> <div id='pblog_value'> <h4>".$post["postTitle"]."<p>".$post["postContent"]. 
                      "</p> </div> <div class='action_icons_container'>";

@@ -6,9 +6,10 @@
         // collect the data from the edit form 
         $title = mysqli_real_escape_string($CON, $_POST["blogtitle"]);
         $content = mysqli_real_escape_string($CON, $_POST["blogcontent"]);
+        $tag = mysqli_real_escape_string($CON, $_POST["tagopt"]);
         $id = mysqli_real_escape_string($CON, $_POST["id"]);
         // update post where the user id matches
-        $update = "UPDATE Post SET postTitle = '$title', postContent = '$content' WHERE PostID = '$id'";
+        $update = "UPDATE Post SET postTitle = '$title', postContent = '$content', TID = '$tag' WHERE PostID = '$id'";
 
         if (mysqli_query($CON, $update))
         {
