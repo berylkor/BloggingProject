@@ -281,14 +281,12 @@
         let password = document.forms["Signupform"]["password"].value;
         let spassword = document.forms["Signupform"]["spassword"].value;
         if (fname == "") {
-        // alert("First Name must be filled");
         Swal.fire({
             title: "First Name must be filled",
             icon: "warning",
         })
         event.preventDefault();
         } else if (!/^[a-zA-Z]+([' -][a-zA-Z]+)?$/.test(fname)) {
-            // alert("Please enter a valid first name");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Please enter a valid first name",
@@ -296,14 +294,12 @@
             });
             event.preventDefault();
         } else if (lname == "") {
-            // alert("Last Name must be filled");
             Swal.fire({
                 title: "Last Name must be filled",
                 icon: "warning",
             });
             event.preventDefault();
         } else if (!/^[a-zA-Z]+([ '-][a-zA-Z]+)*/.test(lname)) {
-            // alert("Please enter a valid last name");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Please enter a valid last name",
@@ -311,14 +307,12 @@
             });
             event.preventDefault();
         } else if (email == "") {
-            // alert("Email must be filled");
             Swal.fire({
                 title: "Email must be filled",
                 icon: "warning",
             });
             event.preventDefault();
         } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
-            // alert("Please enter a valid email address");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Please enter a valid email address",
@@ -326,14 +320,12 @@
             });
             event.preventDefault();
         } else if (password == "") {
-            // alert("Please enter a password");
             Swal.fire({
                 title: "Please enter a password",
                 icon: "warning",
             });
             event.preventDefault();
         } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
-            // alert("Please enter a valid password");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Please enter a valid password",
@@ -341,7 +333,6 @@
             });
             event.preventDefault();
         } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(spassword)) {
-            // alert("Please enter a valid password");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Please enter a valid password",
@@ -349,7 +340,6 @@
             });
             event.preventDefault();
         } else if (password !== spassword) {
-            // alert("Password does not match");
             Swal.fire({
                 title: "Incorrect Entry",
                 text: "Password does not match",

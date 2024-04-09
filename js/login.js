@@ -54,16 +54,30 @@ function validateLogin(e){
     let password = document.forms["Loginform"]["password"].value;
     // validate fields when the login button is clicked
     if (email == "") {
-        alert("Email must be filled");
+        Swal.fire({
+            title: "Email must be filled",
+            icon: "warning",
+        });
         event.preventDefault();
     } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
-        alert("Please enter a valid email address");
+        Swal.fire({
+            title: "Incorrect Entry",
+            text: "Please enter a valid email address",
+            icon: "warning",
+        });
         event.preventDefault();
     } else if (password == "") {
-        alert("Please enter a password");
+        Swal.fire({
+            title: "Please enter a password",
+            icon: "warning",
+        });
         event.preventDefault();
     } else if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)) {
-        alert("Please enter a valid password");
+        Swal.fire({
+            title: "Incorrect Entry",
+            text: "Please enter a valid password",
+            icon: "warning",
+        });
         event.preventDefault();
     } 
     
