@@ -12,23 +12,23 @@ include "../settings/connection.php";
 // $part = explode('=',$end);
 // $spartend = end($part);
 
-// // stores the id of the current user
-// $current_user = $_SESSION["user_id"];
-// // sql statement to find the details of current user
-// $getuser = "SELECT * FROM Users WHERE UserID = '$current_user'";
-// // execute sql statement
-// $getuser_sql = mysqli_query($CON, $getuser);
-// // fetch the results 
-// $getuser_info = mysqli_fetch_all($getuser_sql, MYSQLI_ASSOC);
+// stores the id of the current user
+$current_user = $_SESSION["user_id"];
+// sql statement to find the details of current user
+$getuser = "SELECT * FROM Users WHERE UserID = '$current_user'";
+// execute sql statement
+$getuser_sql = mysqli_query($CON, $getuser);
+// fetch the results 
+$getuser_info = mysqli_fetch_all($getuser_sql, MYSQLI_ASSOC);
 
-// function displaycurrentuser()
-// {
-//     global $getuser_info;
-//     foreach ($getuser_info as $user)
-//     {
-//         echo "<p>".$user["fName"]." ".$user["lName"]."</p>";
-//     }
-// }
+function displaycurrentuser()
+{
+    global $getuser_info;
+    foreach ($getuser_info as $user)
+    {
+        echo "<p>".$user["fName"]." ".$user["lName"]."</p>";
+    }
+}
 
 // collect information for the blog
 // $bloginfo =  getbloginfo($spartend);
@@ -59,7 +59,7 @@ include "../settings/connection.php";
         <div class="sidebar_container">
             <p>Welcome,</p>
             <!-- display name of current user -->
-            <!-- <?php displaycurrentuser() ?>;  -->
+            <?php displaycurrentuser() ?>; 
             <ul class="menu">
                 <?php
                     $rid = checkRole();
