@@ -679,6 +679,11 @@ button#combtn
     border-radius: 1rem;
 }
 
+.creator_action_icons_con
+{
+    text-decoration: none;
+}
+
 /* ---- Edit Page ---- */
 
 .editmain_container
@@ -1115,6 +1120,14 @@ button#combtn
     height: 100%;
     background: #150262;
     width: var(--value);
+}
+
+#likeprogress::-webkit-scrollbar {
+    display: none;
+}
+
+#commentprogress::-webkit-scrollbar {
+    display: none;
 }
 
 /* ----- Comment Page ---- */
