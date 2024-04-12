@@ -26,4 +26,6 @@ function getlikescomments()
     exit;
     // return $numlikescomments_info;
 }
+
+getlikescomments();
 ?>
