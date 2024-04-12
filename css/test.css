@@ -679,7 +679,7 @@ button#combtn
     border-radius: 1rem;
 }
 
-.creator_action_icons_con
+.creator_action_icons_con > a
 {
     text-decoration: none;
 }
@@ -1060,11 +1060,9 @@ button#combtn
 .goalsform_container > form > div > p
 {
     display: inline;
-}
-
-.goalsform_container > form > div > p
-{
     cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
 }
 
 .itemgoal_container

@@ -16,8 +16,15 @@ if (isset($_POST['comsbtn']))
     $count = "UPDATE Post SET countComment = countComment + 1 WHERE PostID = '$postid'";
     if (mysqli_query($CON, $sendcomment) && mysqli_query($CON, $count))
     {
-        // redirect back to the same comment page they made the comment on
-        header("Location: ../view/comment_view.php?key2='$postid'");
+        $postsuser = "SELECT UnID FROM Post WHERE PostID = '$postid'";
+        $postsuser_sql = mysqli_query($CON,$postsuser);
+        $postsuser_info = mysqli_fetch_all($postsuser_sql);
+        foreach ($postsuser_info as $row)
+        {
+            $userid = $row["UnID"];
+            // redirect back to the same comment page they made the comment on
+            header("Location: ../view/comment_view.php?key2='$postid'&key3='$userid'");
+        }
     }
     else
     {
