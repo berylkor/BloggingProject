@@ -11,7 +11,7 @@ if ($role != 2)
     header("Location: ../view/community_view.php");
 };
 
-    $partend = $_GET["KEY"]; 
+    $partend = $_GET["key"]; 
 
 ?>
 
