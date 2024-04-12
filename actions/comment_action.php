@@ -23,7 +23,7 @@ if (isset($_POST['comsbtn']))
         {
             $userid = $row["UnID"];
             // redirect back to the same comment page they made the comment on
-            header("Location: ../view/comment_view.php?key2='$postid'&key3='$userid'");
+            header("Location: ../view/comment_view.php?key2=".$postid."&key3=".$userid);
         }
     }
     else
