@@ -96,7 +96,7 @@ if ($role != 2)
                         </select>
                     </div>
                     <!-- hidden field to collect the ID of the post being edited -->
-                    <input type="hidden" name="id" value="<?php $partend; ?>">  
+                    <input type="hidden" name="postid" value="<?php $partend; ?>">  
                         <!-- post title field -->
                     <div class="blogentry_title">
                         <input type="text" placeholder="Give your post a new title here...." id="title_value" name="blogtitle">
