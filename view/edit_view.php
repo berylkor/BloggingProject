@@ -11,7 +11,11 @@ if ($role != 2)
     header("Location: ../view/community_view.php");
 };
 
-    $partend = $_GET["key"]; 
+    // $partend = $_GET["key"]; 
+    $url = $_SERVER['REQUEST_URI'];
+    $end = basename($url);
+    $part = explode('=',$end);
+    $partend = end($part);
 
 ?>
 
@@ -96,7 +100,7 @@ if ($role != 2)
                         </select>
                     </div>
                     <!-- hidden field to collect the ID of the post being edited -->
-                    <input type="hidden" name="postid" value="<?php $partend; ?>">  
+                    <input type="hidden" name="postid" value="<?php echo $partend; ?>">  
                         <!-- post title field -->
                     <div class="blogentry_title">
                         <input type="text" placeholder="Give your post a new title here...." id="title_value" name="blogtitle">
