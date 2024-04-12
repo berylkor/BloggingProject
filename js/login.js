@@ -79,8 +79,8 @@ function validateLogin(e){
             icon: "warning",
         });
         event.preventDefault();
-    } 
-    
+    }
+       
 }
 
 let logo = document.getElementById('plogo');
