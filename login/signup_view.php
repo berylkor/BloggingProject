@@ -123,7 +123,6 @@
                 <div id="conpass_message">
                     <h3> Confirm Password:</h3>
                     <p id="cpresent" class="invalid"> Minimum <b>8 characters</b> </p>
-                    <p id="match" class="invalid"> Match password </p>
                 </div>
             </div>
             

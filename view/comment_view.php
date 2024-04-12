@@ -37,25 +37,34 @@
             <!-- display name of current user -->
             <?php displaycurrentuser() ?>;
             <ul class="menu">
-                <li>
-                    <a href="../view/posts_view.php">
-                        <img src="../assets/post.svg" alt="post">
-                        <span> Post </span>
-                    </a>                    
-                </li>
-                <li>
-                    <a href="../view/drafts_view.php">
-                        <img src="../assets/draft.svg" alt="draft">
-                        <span> Drafts </span>
-                    </a>                    
-                </li>
+                <?php
+                    $rid = checkRole();
+                    // checks for the user's role and hides restricted pages
+                    // hide creator pages if they are not a creator
+                    if ($rid == 2)
+                    {
+                        echo
+                        "<li>
+                        <a href='../view/posts_view.php'>
+                            <img src='../assets/post.svg' alt='post'>
+                            <span> Post </span>
+                        </a>                    
+                        </li>
+                        <li>
+                            <a href='../view/drafts_view.php'>
+                                <img src='../assets/draft.svg' alt='draft'>
+                                <span> Drafts </span>
+                            </a>                    
+                        </li>
 
-                <li>
-                    <a href="../view/analytics_view.php">
-                        <img src="../assets/analytics.svg" alt="analytics">
-                        <span> Dashboard </span>
-                    </a>                    
-                </li>
+                        <li>
+                            <a href='../view/analytics_view.php'>
+                                <img src='../assets/analytics.svg' alt='analytics'>
+                                <span> Dashboard </span>
+                            </a>                    
+                        </li>";
+                    }
+                    ?>
 
                 <li>
                     <a href="../view/community_view.php">

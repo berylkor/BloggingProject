@@ -26,7 +26,6 @@
     let atpresent = document.getElementById("atpresent");
     let epresent = document.getElementById("epresent");
     let cpresent = document.getElementById("cpresent");
-    let match = document.getElementById("match");
 
     // show message when first name field is clicked
     fname.onfocus = function()
@@ -260,15 +259,6 @@
             cpresent.classList.add("invalid");
         }
         
-        if(spassword.value.match(password))
-        {
-            match.classList.remove("invalid");
-            match.classList.add("valid");
-        }else
-        {
-            match.classList.remove("valid");
-            match.classList.add("invalid");
-        }
     }
 
 
