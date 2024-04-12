@@ -18,13 +18,12 @@ if (isset($_POST['comsbtn']))
     {
         $postsuser = "SELECT UnID FROM Post WHERE PostID = '$postid'";
         $postsuser_sql = mysqli_query($CON,$postsuser);
-        $postsuser_info = mysqli_fetch_all($postsuser_sql);
+        $postsuser_info = mysqli_fetch_all($postsuser_sql, MYSQLI_ASSOC);
         foreach ($postsuser_info as $row)
         {
             $userid = $row["UnID"];
-            echo $userid;
             // redirect back to the same comment page they made the comment on
-            // header("Location: ../view/comment_view.php?key2=".$postid."&key3=".$userid);
+            header("Location: ../view/comment_view.php?key2=".$postid."&key3=".$userid);
         }
     }
     else
