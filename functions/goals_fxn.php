@@ -2,15 +2,16 @@
 
 include "../actions/get_goals_action.php";
 
-$likescomments = getlikescomments();
+$likes = getlikes();
+$comments = getcomments();
 
 function getLikeGoal()
 {
-    global $likescomments;
+    global $likes;
     // check if the function returns any values
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    if (gettype($likes) != "NULL" && !empty($likes))
     {
-        foreach($likescomments as $row)
+        foreach($likes as $row)
         {
             if ($row["goalLikes"] > 0)
             {
@@ -30,10 +31,10 @@ function getLikeGoal()
 
 function getLikeCount()
 {
-    global $likescomments;
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    global $likes;
+    if (gettype($likes) != "NULL" && !empty($likes))
     {
-        foreach($likescomments as $row)
+        foreach($likes as $row)
         {
             if ($row["goalLikes"] > 0)
             {
@@ -53,10 +54,10 @@ function getLikeCount()
 
 function getLikesProgress()
 {
-    global $likescomments;
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    global $likes;
+    if (gettype($likes) != "NULL" && !empty($likes))
     {
-        foreach($likescomments as $row)
+        foreach($likes as $row)
         {
             $goalLike = $row["goalLikes"];
             $countLike = $row["countlikes"];
@@ -79,11 +80,11 @@ function getLikesProgress()
 
 function getCommentGoal()
 {
-    global $likescomments;
+    global $comments;
     // check if the function returns any values
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    if (gettype($comments) != "NULL" && !empty($comments))
     {
-        foreach($likescomments as $row)
+        foreach($comments as $row)
         {
             if ($row["goalComment"] > 0)
             {
@@ -102,10 +103,10 @@ function getCommentGoal()
 
 function getCommentCount()
 {
-    global $likescomments;
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    global $comments;
+    if (gettype($comments) != "NULL" && !empty($comments))
     {
-        foreach($likescomments as $row)
+        foreach($comments as $row)
         {
             if ($row["goalComment"] > 0)
             {
@@ -124,10 +125,10 @@ function getCommentCount()
 
 function getCommentProgress()
 {
-    global $likescomments;
-    if (gettype($likescomments) != "NULL" && !empty($likescomments))
+    global $comments;
+    if (gettype($comments) != "NULL" && !empty($comments))
     {
-        foreach($likescomments as $row)
+        foreach($comments as $row)
         {
             $goalComment = $row["goalComment"];
             $countComment = $row["countComments"];

@@ -13,10 +13,15 @@ $numcomments_sql = mysqli_query($CON, $numcomments);
 $numlikes_info = mysqli_fetch_all($numlikes_sql, MYSQLI_ASSOC);
 $numcomments_info = mysqli_fetch_all($numcomments_sql, MYSQLI_ASSOC);
 
-function getlikescomments()
+function getlikes()
 {
-    global $numlikes_info, $numcomments_info;
-    $numlikescomments_info = array_merge($numlikes_info, $numcomments_info);
-    return $numlikescomments_info;
+    global $numlikes_info;
+    return $numlikes_info;
+}
+
+function getcomments()
+{
+    global $numcomments_info;
+    return $numcomments_info;
 }
 ?>
