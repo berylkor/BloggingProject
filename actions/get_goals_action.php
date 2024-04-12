@@ -22,6 +22,8 @@ function getlikescomments()
 {
     global $numlikes_info, $numcomments_info;
     $numlikescomments_info = array_merge($numlikes_info, $numcomments_info);
-    return $numlikescomments_info;
+    print_r($numlikescomments_info);
+    exit;
+    // return $numlikescomments_info;
 }
 ?>
