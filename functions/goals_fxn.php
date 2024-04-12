@@ -16,7 +16,8 @@ function getLikeGoal()
             {
                 // display the user's like goal 
                 echo "<p>".$row["goalLikes"]."</p>";
-            }else
+            }
+            else
             {
                 echo "<p> Not set yet </p>";
             }
